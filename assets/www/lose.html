@@ -1,0 +1,82 @@
+<html>
+
+<head>
+	<style>
+		
+		@font-face {
+			font-family: retroFont;
+			src: url('retroFont.TTF');
+		}
+		
+		html{
+			font-family: retroFont;
+		}
+		
+		body {
+			background-color: black;
+			color: white;
+			text-align: center;
+			font-size: 400%;
+		}
+		
+		div {
+			color: white;
+		}
+		
+		button {
+			font-size: 100%;
+			font-family: retroFont;
+			background-color: orange; 
+		}
+	</style>
+
+	<script>
+		function init(){
+
+		/*
+			explosion.mp3 - Attribution
+			explode_large - Creative Sound Design
+
+			loseMusic.mp3 - Attribution
+			2DPolygon - Stardust (ID: 425800)
+			Newgrounds Audio Portal - http://www.newgrounds.com/audio
+        */
+
+			var explosion = new Audio("explosion.mp3");
+			explosion.play();
+			
+			var loseMusic = new Audio("loseMusic.mp3");
+			loseMusic.play();
+			loseMusic.loop = true; 
+			
+			var score2 = localStorage.getItem("gameScore");
+			
+			document.getElementById("score").innerHTML = score2;
+			
+			}
+			
+			function replay(){
+				
+				document.location.href = "index.html";
+			}
+	</script>
+</head>
+
+
+
+
+
+<body onLoad="init()">
+	Score:
+	<div id="score"></div>
+	<button onClick="replay()">Play Again</button>
+
+
+
+</body>
+
+
+
+
+
+</html>

@@ -1,0 +1,73 @@
+  @font-face {
+            font-family: retroFont;
+            font-style: normal;
+            font-weight: normal;
+            src: url('fonts/retroFont.TTF') format('truetype');
+        }
+        
+        html {
+            height: 100%;
+            font-family: retroFont;
+        }
+        
+        body {
+            height: 95%;
+            background-color: black;
+      
+        }
+        
+        div.wrap {
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        #coords {
+            color: white;
+        }
+        
+        #ship {
+            position: absolute;
+            z-index: 1;
+        }
+        
+        #shipBound {
+            position: absolute;
+            width: 10%;
+            height: 5%;
+            top: -50%;
+            left: -50%;
+        }
+        
+        .asteroids1 {
+            position: relative;
+            z-index: 2;
+            background-image: url('asteroid.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: -300px;
+            left: -300px;
+        }
+        
+        #scoreBound {
+            position: absolute;
+            left: 50%;
+            
+        }
+        
+        #score {
+            position: absolute;
+            z-index: 3;
+            color: white;
+            font-size: 300%;
+           
+        }
+        
+        #instr{
+            position: absolute;  
+            z-index: 4;
+            top: 85%;
+            color: white;
+            text-align: center;
+            font-size: 150%;
+            
+        }
